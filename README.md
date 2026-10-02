@@ -42,42 +42,13 @@ python -m http.server 8000 --bind 127.0.0.1
 
 访问 http://127.0.0.1:8000/ ，Ctrl+C 停止服务。如果已有预览服务运行，只需要重新生成页面并刷新浏览器。修改 CSS/JavaScript 后可按 Ctrl+F5 强制刷新。
 
-## 首次上传：推荐保留旧仓库历史
+## 发布状态
 
-截至 2026-10-02，远程仓库 `Easonyxz/easonyxz.github.io` 的默认分支为 `main`，旧网站在仓库根目录。本地 `githubio` 目前不是 Git 仓库。不要在此直接 init 后强制推送；先克隆现有仓库，再复制新网站进去。
+新主页已于 2026-10-02 提交到 `Easonyxz/easonyxz.github.io` 的 `main` 分支，旧站点文件已从当前分支移除，没有创建旧站点备份分支。网站发布地址为 https://easonyxz.github.io/ 。
 
-### 用 GitHub Desktop
+已连接 GitHub 的本地维护目录是 `C:\Users\eason\Desktop\academic-homepage\published-homepage`。后续以此目录为准，不必重新 clone 或从 githubio 复制文件。
 
-1. 登录 GitHub Desktop，File → Clone repository，选择 `Easonyxz/easonyxz.github.io`；本地路径选 `C:\Users\eason\Desktop\academic-homepage\published-homepage`（不要选现有 githubio）。
-2. 从 main 创建备份分支，例如 `old-site-20261002`，发布该分支，再切回 main。如果同名备份已存在，另取一个名字。
-3. 把 githubio 中的文件和 assets 目录复制到 published-homepage 根目录，替换同名文件。确保 `.nojekyll`、`.gitignore` 也复制进去，不能变成 `published-homepage/githubio/index.html`。
-4. 在 Desktop 的 Changes 中查看差异，提交为 `Update academic homepage`，点击 Push origin。旧的 css、js、fonts、images、blog-single.html 不影响新首页；如确认无需保留，可从 main 删除，备份分支仍保留原站点。保留仓库的 `.git` 目录。
-5. 打开 GitHub 仓库 Settings → Pages → Build and deployment。Source 选择 **Deploy from a branch**，Branch 选择 **main**，Folder 选择 **/ (root)**，点 Save。
-6. 等 Pages 构建完成，访问 https://easonyxz.github.io/ 。如显示旧页面，强制刷新；如构建失败，在 Actions 查看 Pages 的运行日志。
-
-此方法通过正常提交更新现有仓库，无需新建仓库或更换网址。
-
-### PowerShell 替代方式
-
-安装并登录 Git 后可使用下面步骤；clone 目标须是尚不存在的文件夹。
-
-```powershell
-Set-Location 'C:\Users\eason\Desktop\academic-homepage'
-git clone https://github.com/Easonyxz/easonyxz.github.io.git published-homepage
-Set-Location published-homepage
-git branch old-site-20261002
-git push origin old-site-20261002
-Get-ChildItem -LiteralPath '..\githubio' -Force | ForEach-Object {
-    Copy-Item -LiteralPath $_.FullName -Destination '.' -Recurse -Force
-}
-git status --short
-git diff --stat
-git add .
-git commit -m 'Update academic homepage'
-git push origin main
-```
-
-随后按上面的 Settings → Pages 设置发布来源。如果备份分支已存在，换一个分支名。不要使用 force push。
+GitHub Pages 发布 main 的仓库根目录，正常推送后会自动部署。若部署失败，在仓库 Actions 中查看 Pages 的运行日志；发布来源在 Settings → Pages 中查看。
 
 ## 以后如何更新
 
