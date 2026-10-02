@@ -92,8 +92,7 @@
       "text": "A Windows desktop companion that displays remaining Codex usage and reset times. It provides hover details, automatic refresh, low-quota color cues, resizing, and position memory.",
       "credit": "Concept and maintenance: Xinzhen Yu · Built with GPT-6 Astra.",
       "image": "assets/projects/quota-whale.png",
-      "code": "https://github.com/Easonyxz/Codex-QuotaWhale",
-      "download": "https://github.com/Easonyxz/Codex-QuotaWhale/releases/latest"
+      "code": "https://github.com/Easonyxz/Codex-QuotaWhale"
     }
   ]
 }
