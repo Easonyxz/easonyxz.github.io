@@ -61,3 +61,5 @@ h2{color:#367dbd}
 .lightbox-close{position:fixed;top:14px;right:20px;border:0;border-radius:50%;width:40px;height:40px;background:rgba(255,255,255,.12);color:white;font-size:30px;line-height:1;cursor:pointer}
 .lightbox-close:hover{background:rgba(255,255,255,.25)}.lightbox-open{overflow:hidden}
 @media(max-width:700px){.lightbox{padding:60px 15px 25px}.lightbox-caption{font-size:12px}.lightbox-image{max-width:calc(100vw - 30px)}}
+
+.project-card .publication-image{max-height:190px;width:auto;max-width:100%}.project-credit{font-size:12px!important;color:#777!important}@media(max-width:700px){.project-card .publication-image{max-height:230px}}
