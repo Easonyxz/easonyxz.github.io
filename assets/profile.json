@@ -1,0 +1,88 @@
+{
+  "name": "Xinzhen Yu",
+  "name_cn": "余欣震",
+  "email": "2410247047@mails.szu.edu.cn",
+  "github": "https://github.com/Easonyxz",
+  "scholar": "https://scholar.google.com/citations?user=uHkBb8oAAAAJ",
+  "interests": [
+    "Computational pathology",
+    "Multiple instance learning",
+    "Medical image analysis",
+    "Multimodal agents"
+  ],
+  "education": [
+    {
+      "date": "2024.09 — 2027.06 (expected)",
+      "title": "Shenzhen University",
+      "detail": "M.Sc. student in Biomedical Engineering",
+      "logo": "assets/szu-logo.png",
+      "url": "https://www.szu.edu.cn/"
+    },
+    {
+      "date": "2019.09 — 2023.06",
+      "title": "Shanghai Ocean University",
+      "detail": "B.A. in Management · Logistics Management",
+      "logo": "assets/shou-logo.png",
+      "url": "https://www.shou.edu.cn/"
+    }
+  ],
+  "publications": [
+    {
+      "tag": "Pathology",
+      "title": "Benchmarking of pathology foundation models for assessing HER2 amplification and CEP17 polysomy in breast cancer",
+      "authors": "Qingjie Lv*, Xinzhen Yu*, Tao Wang*, Wei Ding*, Yi Gao, Tian Mou†",
+      "venue": "npj Breast Cancer · 2026",
+      "text": "A multicenter evaluation of pathology foundation models for predicting HER2 amplification and CEP17 polysomy in breast cancer.",
+      "paper": "https://doi.org/10.1038/s41523-026-01036-6",
+      "code": "",
+      "image": "assets/publications/her2.webp",
+      "image_large": "assets/publications/her2-large.webp"
+    },
+    {
+      "tag": "MIL",
+      "title": "Flow-Guided Agents for Whole Slide Image Classification",
+      "authors": "Xinzhen Yu, Pengyu Sun, Yi Gao, Fan Jiang, Nanfeng Zhang, Siyuan Tao, Tian Mou†",
+      "venue": "IEEE BIBM · 2026",
+      "text": "FGA-MIL aggregates whole-slide patch features with latent agents, combining optimal transport and conditional flow matching to structure class representations.",
+      "paper": "",
+      "code": "https://github.com/Easonyxz/FGA-MIL",
+      "image": "assets/publications/fga-mil.webp",
+      "image_large": "assets/publications/fga-mil-large.webp"
+    },
+    {
+      "tag": "Radiomics",
+      "title": "Beyond the browning index: RGB radiomics enables non-destructive prediction of fresh-cut “Red Fuji” apple browning and enzyme activities",
+      "authors": "Yuping Liu, Xinzhen Yu, Fanghui Fan†, Tian Mou†",
+      "venue": "Food Research International · 2026",
+      "text": "RGB radiomics for non-destructive assessment of apple browning and enzyme activities.",
+      "paper": "https://doi.org/10.1016/j.foodres.2026.120776",
+      "code": "",
+      "image": "assets/publications/red-fuji.webp",
+      "image_large": "assets/publications/red-fuji-large.webp"
+    }
+  ],
+  "awards": [
+    "Third Prize, 11th National Biomedical Engineering Innovation Design Competition",
+    "Merit Award, Shenzhen University AI4S Agent Innovation Competition, 2026",
+    "Second-class Graduate Academic Scholarship, Shenzhen University",
+    "People’s Scholarship, Shanghai Ocean University (twice)",
+    "Third Prize, 5th University Student Entrepreneurship Training Camp",
+    "Second Prize, Lanqiao Cup C/C++ Programming Competition, Shanghai division"
+  ],
+  "services": [],
+  "news": [
+    {
+      "date": "2026",
+      "text": "FGA-MIL accepted at IEEE BIBM 2026."
+    },
+    {
+      "date": "2026",
+      "text": "Our study on HER2 amplification and CEP17 polysomy accepted by npj Breast Cancer."
+    },
+    {
+      "date": "2026",
+      "text": "Received a Merit Award at the Shenzhen University AI4S Agent Innovation Competition."
+    }
+  ],
+  "about": "I am a master’s student in Biomedical Engineering at Shenzhen University. My research focuses on deep learning for medical image analysis, with an emphasis on computational pathology, multiple instance learning, and multimodal agents."
+}

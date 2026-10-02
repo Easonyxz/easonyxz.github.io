@@ -1,0 +1,63 @@
+/* Layout follows WowPage's profile sidebar and single-page navigation.
+   Publication typography follows academic-homepage's compact academic lists. */
+:root{--ink:#202124;--muted:#5f6368;--accent:#367dbd;--line:#e8e8e8}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:#fff;color:var(--ink);font:15px/1.65 Arial,"Helvetica Neue","Microsoft YaHei",sans-serif}
+a{color:var(--accent);text-decoration:none}a:hover{color:#235c90;text-decoration:underline}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+header{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid #eee;display:flex;align-items:center;gap:32px;padding:20px max(24px,calc((100vw - 1200px)/2))}
+.brand{color:#333;font-size:17px;font-weight:700;white-space:nowrap}.brand span{font-weight:400}
+nav{display:flex;gap:21px;margin-left:auto;overflow:auto;white-space:nowrap}nav a{color:#555;font-size:14px}
+.layout{max-width:1200px;margin:40px auto;display:grid;grid-template-columns:220px minmax(0,1fr);gap:55px;padding:0 24px}
+.profile{position:sticky;top:112px;align-self:start}.profile h1{font-size:25px;margin:0;line-height:1.4}.chinese{font-size:19px;margin:3px 0 22px}.position{font-size:14px;color:#333}.profile p{font-size:14px}.social{display:grid;gap:9px;margin:23px 0;font-size:14px}
+p{margin:8px 0 14px}h2{font-size:24px;line-height:1.35;margin:0 0 20px;font-weight:700;border-bottom:1px solid #eee;padding-bottom:9px}h3{font-size:16px;line-height:1.45;margin:0 0 6px}section{margin-bottom:35px;scroll-margin-top:15px}#about h2{border:0;padding:0;font-size:26px}#about p{font-size:15px;line-height:1.8}.intro{margin-top:0}.tags{display:none}
+.news-row{display:grid;grid-template-columns:62px 1fr;gap:14px;margin:9px 0}.news-row p{margin:0}.news-row time{color:var(--accent)}
+.timeline{display:grid;grid-template-columns:1fr 175px;gap:20px;padding:11px 0;margin:8px 0}.timeline time{grid-column:2;grid-row:1;font-size:13px;color:#777;text-align:right}.timeline>div{grid-column:1;grid-row:1}.timeline p{font-size:14px;color:var(--muted);margin:0}
+.publication{margin:20px 0;padding:17px 19px;border:1px solid #ddd;border-radius:7px;background:white}.publication h3{font-size:16px}.publication p{font-size:14px;color:var(--muted);margin:7px 0}.publication .eyebrow{font-size:13px;color:var(--accent);font-weight:600;margin:0 0 9px}.authors{font-size:13px!important}.authors strong{color:var(--ink)}.paper-links{display:flex;gap:14px;margin-top:9px}.text-link{font-size:13px}.text-link:before{content:'['}.text-link:after{content:']'}
+.small{font-size:12px;color:#777}
+.awards{padding-left:20px}.awards li{padding:5px 0}
+footer{font-size:12px;color:#888;margin:45px 0 20px;border-top:1px solid #eee;padding-top:18px}.skip{position:absolute;top:-100px;left:10px;background:white;padding:10px;z-index:10}.skip:focus{top:8px}[hidden]{display:none!important}
+@media(max-width:1050px){header{display:block;padding:15px 24px}nav{margin-top:10px;gap:19px}.layout{grid-template-columns:190px minmax(0,1fr);gap:35px}.profile{top:130px}}
+@media(max-width:700px){header{position:relative;padding:15px 20px}.brand{font-size:16px}nav{gap:19px}nav a{font-size:13px}.layout{display:block;margin-top:25px;padding:0 20px}.profile{position:static;border-bottom:1px solid #eee;margin-bottom:28px;padding-bottom:17px}.profile h1{display:inline;font-size:24px}.chinese{display:inline;margin-left:12px}.position{margin-top:15px}.social{display:flex;flex-wrap:wrap;gap:14px;margin:15px 0}.timeline{display:block}.timeline time{display:block;text-align:left;margin-bottom:5px}.publication{padding:14px}.news-row{gap:8px}h2{font-size:22px}#about h2{font-size:24px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+.profile-avatar{display:block;width:160px;height:160px;object-fit:cover;border-radius:50%;border:1px solid #eee;padding:4px;margin:0 0 22px}
+@media(max-width:700px){.profile-avatar{width:110px;height:110px;margin-bottom:18px}}
+
+h2{color:#367dbd}
+.education-row{display:grid;grid-template-columns:42px minmax(0,1fr) 190px;align-items:center;gap:16px;margin:22px 0}
+.school-logo{width:42px;height:42px;object-fit:contain}
+.education-row h3{font-size:15px;margin:0 0 3px}.education-row h3 a{color:#202124}
+.education-row p{margin:0;font-size:14px;color:#5f6368}.education-row time{font-size:13px;color:#777;text-align:right}
+.publication{padding:17px 18px;margin:18px 0}.publication h3{font-size:16px;margin:0 0 6px}.publication .authors{margin:5px 0}.publication .pub-summary{margin:7px 0 10px}
+.pub-bottom{display:flex;align-items:baseline;flex-wrap:wrap;gap:8px 15px;font-size:13px}.pub-venue{color:#367dbd;font-weight:600}.paper-links{margin:0}.publication.with-image{display:grid;grid-template-columns:190px minmax(0,1fr);gap:20px;align-items:center}.publication-image{display:block;width:190px;max-height:150px;object-fit:contain}
+@media(max-width:700px){.education-row{grid-template-columns:36px minmax(0,1fr);gap:12px}.school-logo{width:36px;height:36px}.education-row time{grid-column:2;text-align:left;margin-top:-8px}.publication.with-image{display:block}.publication-image{width:100%;max-height:200px;margin-bottom:14px}}
+@media print{.school-logo{width:30px;height:30px}.education-row{grid-template-columns:30px minmax(0,1fr) 170px}.publication-image{display:none}.publication.with-image{display:block}}
+
+/* Compact official emblems, with the rectangular source surroundings clipped. */
+.school-logo{display:block;width:24px;height:24px;object-fit:contain;background:none;border-radius:0}
+
+.education-row{grid-template-columns:24px minmax(0,1fr) 190px;gap:10px;align-items:start}.education-row .school-logo{margin-top:1px}
+.education-row h3{font-weight:500;font-size:16px}.education-row p{margin-top:4px}
+.publication{transition:box-shadow .25s ease,border-color .25s ease,transform .25s ease}
+.publication:focus-within{box-shadow:0 6px 18px rgba(32,33,36,.09);border-color:#b8cddd}
+@media(hover:hover) and (pointer:fine){.publication:hover{box-shadow:0 8px 20px rgba(32,33,36,.11);border-color:#b8cddd;transform:translateY(-2px)}.text-link{transition:color .2s ease}nav a{position:relative;transition:color .2s ease}nav a:hover{color:#367dbd}}
+@media(max-width:700px){.education-row{grid-template-columns:24px minmax(0,1fr)}.education-row time{margin-top:-4px}.school-logo{width:24px;height:24px}}
+@media(prefers-reduced-motion:reduce){.publication{transition:none}.publication:hover{transform:none}}
+@media print{.publication{box-shadow:none!important;transform:none!important}.school-logo{print-color-adjust:exact;-webkit-print-color-adjust:exact}}
+
+.publication.with-image{grid-template-columns:220px minmax(0,1fr);gap:22px}
+.figure-link{display:flex;align-items:center;justify-content:center;min-width:0;background:#fff;border-radius:4px}
+.publication-image{width:100%;max-height:180px;object-fit:contain;height:auto}
+@media(max-width:700px){.publication.with-image{display:block}.figure-link{margin-bottom:16px}.publication-image{max-height:240px;max-width:400px;margin:0}}
+@media print{.figure-link{display:none}}
+
+.figure-link{cursor:zoom-in}
+.lightbox{position:fixed;inset:0;width:100vw;height:100dvh;max-width:none;max-height:none;margin:0;padding:55px 5vw 30px;border:0;background:transparent;overflow:auto;text-align:center}
+.lightbox[open]{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:15px}
+.lightbox::backdrop{background:rgba(18,22,27,.86)}
+.lightbox-image{display:block;max-width:90vw;max-height:calc(100dvh - 145px);width:auto;height:auto;object-fit:contain;background:white;border-radius:4px;box-shadow:0 10px 40px rgba(0,0,0,.25)}
+.lightbox-caption{max-width:1000px;color:#fff;font-size:14px;margin:0}
+.lightbox-close{position:fixed;top:14px;right:20px;border:0;border-radius:50%;width:40px;height:40px;background:rgba(255,255,255,.12);color:white;font-size:30px;line-height:1;cursor:pointer}
+.lightbox-close:hover{background:rgba(255,255,255,.25)}.lightbox-open{overflow:hidden}
+@media(max-width:700px){.lightbox{padding:60px 15px 25px}.lightbox-caption{font-size:12px}.lightbox-image{max-width:calc(100vw - 30px)}}
